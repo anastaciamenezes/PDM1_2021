@@ -17,7 +17,7 @@ class Resumo extends StatelessWidget {
     this.temperaturaMaxima, 
     this.temperaturaMinima, 
     this.numeroIcone
-    }) : super(key: key);
+  }) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
@@ -47,27 +47,27 @@ class Resumo extends StatelessWidget {
         Padding(padding: EdgeInsets.all(5)),
         IntrinsicHeight(
           child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image(image: AssetImage('images/$numeroIcone.png')),
-            Padding(padding: EdgeInsets.all(2)),
-            Text(
-              '${temperaturaAtual.toStringAsFixed(0)} ºC',
-              style: TextStyle(fontSize: 40),
-            ),
-            VerticalDivider(
-              color: Colors.black,
-              thickness: 1,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('${temperaturaMaxima.toStringAsFixed(0)} ºC'),
-                Text('${temperaturaMinima.toStringAsFixed(0)} ºC'),
-              ],  
-            ),
-          ],
-        ),
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image(image: AssetImage('images/$numeroIcone.png')),
+              Padding(padding: EdgeInsets.all(2)),
+              Text(
+                '${temperaturaAtual.toStringAsFixed(0)} ºC',
+                style: TextStyle(fontSize: 40),
+              ),
+              VerticalDivider(
+                color: Colors.black,
+                thickness: 1,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('${temperaturaMaxima.toStringAsFixed(0)} ºC'),
+                  Text('${temperaturaMinima.toStringAsFixed(0)} ºC'),
+                ],  
+              ),
+            ],
+          ),
         ),
         Padding(padding: EdgeInsets.all(10)),
         Text(
@@ -77,5 +77,4 @@ class Resumo extends StatelessWidget {
       ],
     );
   }
-
 }
